@@ -1,0 +1,22 @@
+.d-flex{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    align-items:center;
+    border:1px solid black;
+    cursor:pointer;
+    button{
+        margin:2%;
+        background: #cccccc;
+        color:white;
+        border-radius:5%;
+    }
+}
+
+.green{
+    background: rgb(83, 186, 79);
+}
+
+.red{
+    background: rgb(173, 74, 74);
+}
