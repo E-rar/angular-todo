@@ -1,0 +1,24 @@
+.header{
+    div{
+        width:70%;
+        margin:auto;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        input{
+            border:black solid 2px;
+            width:70%;
+            border-radius:15px;
+            padding:2%;
+        }
+        button{
+            background: rgb(229, 143, 3);
+            border-radius:15px;
+            padding:2%;
+            color:white;
+            &:hover{
+                background: rgb(247, 171, 47);
+            }
+        }
+    }
+}

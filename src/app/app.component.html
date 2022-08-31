@@ -1,19 +1,21 @@
-
 <div class="" role="main">
   <!-- Highlight Card -->
-  <div>
-    <h1>Unsere Todos</h1>
-    <h5>Offene Todos :{{countOpenTodo()}}</h5>
+  <div class="header">
+    <div>
+      <h1>Unsere Todos</h1>
+      <h5>Offene Todos :{{ countOpenTodo() }}</h5>
+    </div>
+    <div>
+      <input type="text" (keyup)="setTodo($event)" />
+      <button (click)="addTodo()">Add Todo</button>
+    </div>
   </div>
-  <div>
-    <input type="text" (keyup)="setTodo($event)">
-    <button (click)="addTodo()">Add Todo</button>
-  </div>
-  <div *ngFor="let todo of todos,let i = index">
-    <todo [todo]="todo" 
-    [index]="i" 
-    (todoIndex)="toggleTodo($event)"
-    (deleteIndex)="deleteTodo($event)"
+  <div *ngFor="let todo of todos; let i = index">
+    <todo
+      [todo]="todo"
+      [index]="i"
+      (todoIndex)="toggleTodo($event)"
+      (deleteIndex)="deleteTodo($event)"
     ></todo>
   </div>
 </div>
